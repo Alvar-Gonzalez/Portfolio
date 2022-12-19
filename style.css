@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+:root{
+    --primaryTextColor: rgb(255, 255, 255);
+    --secondaryTextColor: rgb(90, 210, 230);
+    --primaryBackgroundColor: rgb(9, 30, 73); 
+    --secondaryBackgroundColor: rgb(217, 142, 2);
+    --hoverColor: rgb(217, 142, 2);
+}
+/* General Utilities */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primaryBackgroundColor);
+  color: var(--primaryTextColor);
+  font-family: 'GFS Didot', sans-serif;
+}
+
+h1 {
+  font-size: 120px;
+}
+
+h2 {
+  font-size: 50px
+}
+
+h3 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 20px;
+}
+
+header {
+  background-image: url('img/wim-van-t-einde-kgsn4gPAQ-8-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.mainNav a:hover, .iconBar a:hover {
+  color: var(--secondaryBackgroundColor);
+}
+
+/* Main Navigation Bar */
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mainNav a { 
+  color: var(--primaryTextColor);
+  display: block;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mainNav .menuBar {
+  display: none;
+}
+
+/* Main Header*/
+.showcase {
+  animation-name: imgLeftRight;
+  animation-duration: 5s;
+  padding: 200px 0px 20px 0px;
+  position: relative;
+  text-align: center;
+}
+
+.showcase .bar {
+  background-color: var(--secondaryBackgroundColor);
+  height: 2px;
+  margin: auto;
+  width: 80%;
+}
+
+.showcase h3 {
+  padding: 20px;
+}
+
+/* Container Section */
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+/* About Section */
+.about {
+  align-items: center;
+  height: 400px;
+  padding: 20px;
+}
+
+.about h2 {
+  padding: 5px;
+}
+
+.about p {
+  text-align: justify;
+}
+
+.grid2{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+/* Skills Section */
+.skills h2 {
+  padding: 10px;
+  text-align: center;
+}
+
+.skillsGrid div {
+  padding: 20px 0px;
+}
+
+.skills .skillsBullets {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.skillsBullets div {
+  padding: 5px;
+  margin: 5px;
+}
+
+.skillsBullets .grid2B {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;  
+  text-align: center;
+}
+
+.grid2B i {
+  padding: 5px;
+}
+
+.skillsGrid .fa-html5 {
+  color: orange;
+}
+
+.skillsGrid .fa-css3-alt {
+  color: lightblue;
+}
+
+.skillsGrid .fa-bootstrap {
+  color: purple;
+}
+
+.skillsGrid .fa-sass {
+  color: rgb(229, 117, 136);
+}
+
+.skillsGrid .fa-js {
+  color: yellow;
+}
+
+.skillsGrid .fa-node {
+  color: green;
+}
+
+.skillsGrid .fa-c {
+  color:rgb(22, 22, 228);
+}
+
+.skillsGrid .fa-python {
+  color: rgb(237, 237, 141)
+}
+
+.skillsIntro {
+  text-align: justify;
+}
+
+/* Portfolio Section */
+.portfolio {
+  align-items: center;
+  padding: 40px 0px;
+}
+
+.portfolio ul li {
+  list-style-type: none;
+  padding: 10px 0px;
+}
+
+.portfolio .grid2 {
+  align-items: center;
+  text-align: center;
+}
+
+.ecommerceBullImg img{
+  border-radius: 5%;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+/* Footer Section */
+footer {
+  background: var(--secondaryBackgroundColor);
+  color: var(--primaryBackgroundColor);
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Social Right Side Bar */
+.iconBar {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+}
+
+.iconBar a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+
+.github, .messenger, .linkedin {
+  color: var(--primaryTextColor);
+}
+
+/* Responsive Website */
+@media screen and (max-height: 500px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .showcase {
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p {
+    
+    font-size: 15px;
+  }
+
+  header {
+    height: 50vh;
+  }
+
+  .mainNav a {
+    display: none;
+  }
+
+  .mainNav a.menuBar {
+    display: block;
+  }
+  
+  .mainNav.menuToggle {
+    align-items: center; 
+    background-color: rgb(0, 0, 0, 0); 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .mainNav.menuToggle .menuBar {
+    margin: auto;
+  }
+
+  .mainNav.menuToggle a {
+    display: flex;
+    float: none;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+  }
+  .showcase {
+    padding-top: 35px;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .skillsBullets {
+    padding: 0px;
+  }
+
+  .skillsBullets div {
+    margin: 5px 2px;
+    padding: 5px 2px;
+  }
+
+  .skillsBullets .grid2B {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+  }
+
+  .skills h2 {
+    padding: 0;
+  }
+
+  .iconBar a {
+    font-size: 20px;
+    padding: 20px 5px;
+  }
+  
+}
+
+@media screen and (max-width: 420px) {
+  .about {
+    height: 300px;
+  }
+
+  .portfolio h2 {
+    font-size: 20px;
+  }
+  
+  .portfolio ul li{
+    font-size: 10px;
+  }
+
+  .iconBar a {
+    padding: 20px 3px;
+  }
+}
+
+@keyframes imgLeftRight {
+    0%   {left: 0px; top:0px;}
+    25%  {left: 50px; top:0px;}
+    50%  {left: 0px; top:0px;}
+    75%  {left: -50px; top:0px;}
+    100% {left: 0px; top:0px;}
+}
